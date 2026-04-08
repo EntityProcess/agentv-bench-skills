@@ -1,13 +1,25 @@
 targets:
-  claude-sonnet:
-    provider: claude
-    model: claude-sonnet-4-6
-  claude-opus:
-    provider: claude
-    model: claude-opus-4-6
-  gpt-5:
+  # ── LLM targets (direct model access) ─────────────────────────────
+  - name: gh-models
     provider: openai
-    model: gpt-5
-  gemini-pro:
+    base_url: https://models.github.ai/inference
+    api_key: ${{ GH_MODELS_TOKEN }}
+    model: ${{ GH_MODELS_MODEL }}
+
+  - name: azure
+    provider: azure
+    endpoint: ${{ AZURE_OPENAI_ENDPOINT }}
+    api_key: ${{ AZURE_OPENAI_API_KEY }}
+    model: ${{ AZURE_DEPLOYMENT_NAME }}
+    api_format: ${{ AZURE_OPENAI_API_FORMAT }}
+    version: ${{ AZURE_OPENAI_API_VERSION }}
+
+  - name: gemini
     provider: gemini
-    model: gemini-3-pro
+    api_key: ${{ GOOGLE_GENERATIVE_AI_API_KEY }}
+    model: ${{ GEMINI_MODEL_NAME }}
+
+  - name: openrouter
+    provider: openrouter
+    api_key: ${{ OPENROUTER_API_KEY }}
+    model: ${{ OPENROUTER_MODEL }}
