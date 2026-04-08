@@ -1,0 +1,37 @@
+description: "Logic puzzle reasoning evaluation"
+tests:
+  - id: knights-knaves-basic
+    criteria: Correctly solve a knights and knaves logic puzzle
+    input:
+      - role: user
+        content: |
+          On an island, every person is either a Knight (always tells the truth)
+          or a Knave (always lies). You meet two people, A and B.
+          A says: "B is a Knight."
+          B says: "A and I are of different types."
+          What are A and B?
+    expected_output:
+      - role: assistant
+        content: "A is a Knave and B is a Knave."
+    assertions:
+      - type: llm-grader
+        prompt: |
+          Check if the response correctly identifies that both A and B are Knaves.
+          The reasoning should be logically sound.
+      - type: contains
+        value: "Knave"
+
+  - id: river-crossing
+    criteria: Solve a classic river crossing puzzle
+    input:
+      - role: user
+        content: |
+          A farmer needs to cross a river with a wolf, a goat, and a cabbage.
+          The boat can only carry the farmer and one item at a time.
+          If left alone, the wolf will eat the goat, and the goat will eat the cabbage.
+          How can the farmer get everything across safely?
+    assertions:
+      - type: llm-grader
+        prompt: |
+          Verify the solution correctly gets all three items across without any being eaten.
+          The farmer must take the goat first, and the solution should have 7 crossings.

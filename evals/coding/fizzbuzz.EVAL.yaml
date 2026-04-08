@@ -1,0 +1,30 @@
+description: "FizzBuzz coding evaluation"
+tests:
+  - id: fizzbuzz-python
+    criteria: Implement FizzBuzz correctly in Python
+    input:
+      - role: user
+        content: |
+          Write a Python function called fizzbuzz(n) that returns a list of strings
+          for numbers 1 to n. For multiples of 3, use "Fizz". For multiples of 5,
+          use "Buzz". For multiples of both, use "FizzBuzz". Otherwise use the number
+          as a string.
+    assertions:
+      - type: code-grader
+        command: ["python3", "-c", "
+import sys
+sys.path.insert(0, '.')
+# Extract the function from the response
+exec(open('/tmp/fizzbuzz.py').read())
+result = fizzbuzz(15)
+expected = ['1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz']
+assert result == expected, f'Expected {expected}, got {result}'
+print('PASS')
+"]
+      - type: llm-grader
+        prompt: |
+          Check that the implementation:
+          1. Defines a function called fizzbuzz
+          2. Handles multiples of 3 (Fizz), 5 (Buzz), and both (FizzBuzz) correctly
+          3. Returns a list of strings
+          4. Handles the range 1 to n inclusive

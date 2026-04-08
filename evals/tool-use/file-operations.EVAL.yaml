@@ -1,0 +1,30 @@
+description: "File operation tool use evaluation"
+tests:
+  - id: create-and-read-file
+    criteria: Create a file and read it back
+    input:
+      - role: user
+        content: |
+          Create a file called /tmp/agentv-test.txt with the content "Hello AgentV"
+          and then read it back to confirm the content.
+    assertions:
+      - type: llm-grader
+        prompt: |
+          Check that the agent:
+          1. Created the file /tmp/agentv-test.txt
+          2. Wrote "Hello AgentV" as the content
+          3. Read the file back to verify
+          4. Confirmed the content matches
+
+  - id: search-codebase
+    criteria: Search for a specific pattern in code
+    input:
+      - role: user
+        content: |
+          Search this repository for any YAML files that contain the word "assertions".
+          List all matching files with line numbers.
+    assertions:
+      - type: llm-grader
+        prompt: |
+          Verify the agent used appropriate search tools and found YAML files
+          containing "assertions". The results should include file paths and line numbers.
