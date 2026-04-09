@@ -1,0 +1,71 @@
+{
+  "assertions": [
+    {
+      "text": "Correct identification of roles",
+      "passed": true,
+      "evidence": "The response correctly concludes that both A and B are Knaves."
+    },
+    {
+      "text": "Sound logical reasoning",
+      "passed": true,
+      "evidence": "The reasoning correctly demonstrates that assuming A is a Knight leads to a contradiction, whereas assuming A is a Knave is consistent with B also being a Knave."
+    },
+    {
+      "text": "Output contains \"Knave\"",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Correct identification of roles",
+          "passed": true,
+          "evidence": "The response correctly concludes that both A and B are Knaves."
+        },
+        {
+          "text": "Sound logical reasoning",
+          "passed": true,
+          "evidence": "The reasoning correctly demonstrates that assuming A is a Knight leads to a contradiction, whereas assuming A is a Knave is consistent with B also being a Knave."
+        }
+      ],
+      "details": {
+        "puzzle_type": "Knights and Knaves",
+        "conclusion": "Both Knaves",
+        "consistency_check": "passed"
+      }
+    },
+    {
+      "name": "contains-Knave",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"Knave\"",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "assertions": [
+    {
+      "text": "Takes the goat first",
+      "passed": true,
+      "evidence": "Step 1 explicitly moves the goat across first."
+    },
+    {
+      "text": "Uses 7 crossings",
+      "passed": true,
+      "evidence": "The solution lists exactly seven trips across/back."
+    },
+    {
+      "text": "Gets all three items across safely without being eaten",
+      "passed": true,
+      "evidence": "The explanation states the wolf is never left alone with the goat and the goat is never left alone with the cabbage, so all end up across safely."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 0.98,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Takes the goat first",
+          "passed": true,
+          "evidence": "Step 1 explicitly moves the goat across first."
+        },
+        {
+          "text": "Uses 7 crossings",
+          "passed": true,
+          "evidence": "The solution lists exactly seven trips across/back."
+        },
+        {
+          "text": "Gets all three items across safely without being eaten",
+          "passed": true,
+          "evidence": "The explanation states the wolf is never left alone with the goat and the goat is never left alone with the cabbage, so all end up across safely."
+        }
+      ],
+      "details": {
+        "crossings": 7,
+        "first_item": "goat",
+        "safety_constraints_satisfied": true
+      }
+    }
+  ]
+}

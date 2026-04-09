@@ -1,0 +1,69 @@
+{
+  "assertions": [
+    {
+      "text": "Correctly identifies both A and B as Knaves",
+      "passed": true,
+      "evidence": "The response concludes: \"A is a Knave, and B is a Knave.\""
+    },
+    {
+      "text": "Reasoning is logically sound and consistent with knight/knave rules",
+      "passed": true,
+      "evidence": "It checks the knight case for A and derives a contradiction, then shows A must be a knave, which forces B to be a knave as well."
+    },
+    {
+      "text": "Output contains \"Knave\"",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Correctly identifies both A and B as Knaves",
+          "passed": true,
+          "evidence": "The response concludes: \"A is a Knave, and B is a Knave.\""
+        },
+        {
+          "text": "Reasoning is logically sound and consistent with knight/knave rules",
+          "passed": true,
+          "evidence": "It checks the knight case for A and derives a contradiction, then shows A must be a knave, which forces B to be a knave as well."
+        }
+      ],
+      "details": {
+        "logic": "A cannot be a Knight because that would make B a Knight, causing B's 'different types' claim to be false. Therefore A is a Knave; then B is not a Knight, so B is a Knave."
+      }
+    },
+    {
+      "name": "contains-Knave",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"Knave\"",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

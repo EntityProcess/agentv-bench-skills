@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "eval_file": "/home/christso/projects/agentv-bench-skills/evals/reasoning/logic-puzzle.EVAL.yaml",
+    "timestamp": "2026-04-08T23:20:27.443Z",
+    "targets": [
+      "azure"
+    ],
+    "tests_run": [
+      "knights-knaves-basic",
+      "river-crossing"
+    ],
+    "experiment": "without-superpowers"
+  },
+  "run_summary": {
+    "azure": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0
+      },
+      "time_seconds": {
+        "mean": 2.162,
+        "stddev": 0.233
+      },
+      "tokens": {
+        "mean": 224.5,
+        "stddev": 25.5
+      }
+    }
+  },
+  "per_grader_summary": {
+    "llm-grader:llm-grader": {
+      "mean": 0.99,
+      "stddev": 0.01
+    },
+    "contains-Knave:contains": {
+      "mean": 1,
+      "stddev": 0
+    }
+  },
+  "notes": []
+}

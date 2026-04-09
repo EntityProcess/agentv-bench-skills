@@ -1,0 +1,73 @@
+{
+  "assertions": [
+    {
+      "text": "Correctly identifies both A and B as Knaves",
+      "passed": true,
+      "evidence": "The response concludes: “A is a Knave, and B is a Knave.”"
+    },
+    {
+      "text": "Reasoning is logically sound",
+      "passed": true,
+      "evidence": "It rules out A being a Knight because that would force B to be a Knight, making B's statement false; then it shows A being a Knave implies B is also a Knave, which is consistent."
+    },
+    {
+      "text": "Output contains \"Knave\"",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Correctly identifies both A and B as Knaves",
+          "passed": true,
+          "evidence": "The response concludes: “A is a Knave, and B is a Knave.”"
+        },
+        {
+          "text": "Reasoning is logically sound",
+          "passed": true,
+          "evidence": "It rules out A being a Knight because that would force B to be a Knight, making B's statement false; then it shows A being a Knave implies B is also a Knave, which is consistent."
+        }
+      ],
+      "details": {
+        "labels": {
+          "A": "Knave",
+          "B": "Knave"
+        },
+        "reasoning_quality": "sound"
+      }
+    },
+    {
+      "name": "contains-Knave",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"Knave\"",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

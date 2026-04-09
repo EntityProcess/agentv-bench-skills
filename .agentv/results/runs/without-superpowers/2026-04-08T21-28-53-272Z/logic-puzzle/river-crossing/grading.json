@@ -1,0 +1,77 @@
+{
+  "assertions": [
+    {
+      "text": "The solution takes the goat across first.",
+      "passed": true,
+      "evidence": "This matches the required initial move in the classic farmer-wolf-goat-cabbage puzzle."
+    },
+    {
+      "text": "The solution uses exactly 7 crossings.",
+      "passed": true,
+      "evidence": "A correct standard solution has 7 trips total: goat over, return alone, wolf over, goat back, cabbage over, return alone, goat over."
+    },
+    {
+      "text": "All three items are transported across the river.",
+      "passed": true,
+      "evidence": "The wolf, goat, and cabbage all end up on the far side."
+    },
+    {
+      "text": "No item is ever left alone with something that would eat it.",
+      "passed": true,
+      "evidence": "At no point are wolf-goat or goat-cabbage left together without the farmer present."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 0.97,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "The solution takes the goat across first.",
+          "passed": true,
+          "evidence": "This matches the required initial move in the classic farmer-wolf-goat-cabbage puzzle."
+        },
+        {
+          "text": "The solution uses exactly 7 crossings.",
+          "passed": true,
+          "evidence": "A correct standard solution has 7 trips total: goat over, return alone, wolf over, goat back, cabbage over, return alone, goat over."
+        },
+        {
+          "text": "All three items are transported across the river.",
+          "passed": true,
+          "evidence": "The wolf, goat, and cabbage all end up on the far side."
+        },
+        {
+          "text": "No item is ever left alone with something that would eat it.",
+          "passed": true,
+          "evidence": "At no point are wolf-goat or goat-cabbage left together without the farmer present."
+        }
+      ],
+      "details": {
+        "crossings": 7,
+        "items_transported": [
+          "wolf",
+          "goat",
+          "cabbage"
+        ],
+        "first_move": "goat",
+        "validity": "valid standard solution"
+      }
+    }
+  ]
+}

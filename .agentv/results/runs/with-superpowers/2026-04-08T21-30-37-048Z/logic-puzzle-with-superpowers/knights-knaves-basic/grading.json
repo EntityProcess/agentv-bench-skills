@@ -1,0 +1,69 @@
+{
+  "assertions": [
+    {
+      "text": "Identifies that both A and B are Knaves",
+      "passed": false,
+      "evidence": "No response text was provided to evaluate."
+    },
+    {
+      "text": "Logical reasoning is sound",
+      "passed": false,
+      "evidence": "No reasoning was provided for evaluation."
+    },
+    {
+      "text": "Output contains \"Knave\"",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 2,
+    "total": 3,
+    "pass_rate": 0.333
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 0,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "fail",
+      "assertions": [
+        {
+          "text": "Identifies that both A and B are Knaves",
+          "passed": false,
+          "evidence": "No response text was provided to evaluate."
+        },
+        {
+          "text": "Logical reasoning is sound",
+          "passed": false,
+          "evidence": "No reasoning was provided for evaluation."
+        }
+      ],
+      "details": {
+        "error": "Missing input response"
+      }
+    },
+    {
+      "name": "contains-Knave",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"Knave\"",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

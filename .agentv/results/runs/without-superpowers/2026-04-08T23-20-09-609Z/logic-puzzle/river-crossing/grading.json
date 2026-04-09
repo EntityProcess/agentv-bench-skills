@@ -1,0 +1,60 @@
+{
+  "assertions": [
+    {
+      "text": "All items are safely transported across the river.",
+      "passed": true,
+      "evidence": "The steps ensure that the wolf is never left alone with the goat and the goat is never left alone with the cabbage."
+    },
+    {
+      "text": "The farmer takes the goat first.",
+      "passed": true,
+      "evidence": "Step 1 is 'Take the goat across'."
+    },
+    {
+      "text": "The solution has exactly 7 crossings.",
+      "passed": true,
+      "evidence": "The response lists 7 distinct steps representing each trip across the river."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "All items are safely transported across the river.",
+          "passed": true,
+          "evidence": "The steps ensure that the wolf is never left alone with the goat and the goat is never left alone with the cabbage."
+        },
+        {
+          "text": "The farmer takes the goat first.",
+          "passed": true,
+          "evidence": "Step 1 is 'Take the goat across'."
+        },
+        {
+          "text": "The solution has exactly 7 crossings.",
+          "passed": true,
+          "evidence": "The response lists 7 distinct steps representing each trip across the river."
+        }
+      ],
+      "details": {
+        "num_crossings": 7
+      }
+    }
+  ]
+}

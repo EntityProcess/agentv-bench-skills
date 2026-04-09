@@ -1,0 +1,76 @@
+{
+  "assertions": [
+    {
+      "text": "Identifies A as a Knave and B as a Knave.",
+      "passed": true,
+      "evidence": "The final conclusion states 'A is a Knave' and 'B is a Knave'."
+    },
+    {
+      "text": "Reasoning for Case 1 (A is Knight) is logically sound.",
+      "passed": true,
+      "evidence": "The response correctly identifies a contradiction when assuming A is a Knight, as B's statement would need to be true but would be false."
+    },
+    {
+      "text": "Reasoning for Case 2 (A is Knave) is logically sound.",
+      "passed": true,
+      "evidence": "The response correctly identifies that if A is a Knave, A's statement about B is false (making B a Knave), and B's statement is false (making them the same type), which is consistent."
+    },
+    {
+      "text": "Output contains \"Knave\"",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "errors_encountered": 0
+  },
+  "evaluators": [
+    {
+      "name": "llm-grader",
+      "type": "llm-grader",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Identifies A as a Knave and B as a Knave.",
+          "passed": true,
+          "evidence": "The final conclusion states 'A is a Knave' and 'B is a Knave'."
+        },
+        {
+          "text": "Reasoning for Case 1 (A is Knight) is logically sound.",
+          "passed": true,
+          "evidence": "The response correctly identifies a contradiction when assuming A is a Knight, as B's statement would need to be true but would be false."
+        },
+        {
+          "text": "Reasoning for Case 2 (A is Knave) is logically sound.",
+          "passed": true,
+          "evidence": "The response correctly identifies that if A is a Knave, A's statement about B is false (making B a Knave), and B's statement is false (making them the same type), which is consistent."
+        }
+      ]
+    },
+    {
+      "name": "contains-Knave",
+      "type": "contains",
+      "score": 1,
+      "reasoning": "",
+      "weight": 1,
+      "verdict": "pass",
+      "assertions": [
+        {
+          "text": "Output contains \"Knave\"",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}
